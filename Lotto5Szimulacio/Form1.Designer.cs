@@ -28,41 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            button1 = new Button();
+            panel = new Panel();
+            btnSorsolas = new Button();
+            leredmenyek = new Label();
             SuspendLayout();
             // 
-            // panel1
+            // panel
             // 
-            panel1.Location = new Point(18, 20);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(468, 366);
-            panel1.TabIndex = 0;
+            panel.Location = new Point(18, 20);
+            panel.Name = "panel";
+            panel.Size = new Size(468, 366);
+            panel.TabIndex = 0;
             // 
-            // button1
+            // btnSorsolas
             // 
-            button1.Location = new Point(570, 30);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnSorsolas.Location = new Point(549, 20);
+            btnSorsolas.Name = "btnSorsolas";
+            btnSorsolas.Size = new Size(75, 23);
+            btnSorsolas.TabIndex = 1;
+            btnSorsolas.Text = "Sorsolás";
+            btnSorsolas.UseVisualStyleBackColor = true;
+            btnSorsolas.Click += btnSorsolas_Click;
+            // 
+            // leredmenyek
+            // 
+            leredmenyek.AutoSize = true;
+            leredmenyek.Location = new Point(549, 72);
+            leredmenyek.Name = "leredmenyek";
+            leredmenyek.Size = new Size(38, 15);
+            leredmenyek.TabIndex = 2;
+            leredmenyek.Text = "label1";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(panel1);
+            Controls.Add(leredmenyek);
+            Controls.Add(btnSorsolas);
+            Controls.Add(panel);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Panel panel1;
-        private Button button1;
+        private Panel panel;
+        private Button btnSorsolas;
+        private Label leredmenyek;
     }
 }
